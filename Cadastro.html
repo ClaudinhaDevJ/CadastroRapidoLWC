@@ -1,0 +1,31 @@
+<template>
+
+
+<lightning-card title="Cadastro Rápido">
+
+<div class="slds-p-horizontal_small">
+<div class="body"> <!-- Aqui foi criada uma classe para colocar um background no fundo do cadastro-->
+
+<lightning-record-edit-form object-api-name="Opportunity" onsuccess={handleSuccess}> <!-- Aqui um objeto é declarado 
+para indicar onde serão inseridos os campos e uma função é chamada dentro de onSuccess. Um ID de registro é gerado 
+quando um registro é criado com sucesso. Para retornar o Id, use o manipulador onsuccess.-->
+
+<lightning-messages> </lightning-messages> <!--área para mostrar qualquer erro ao atualizar/inserir o registro.-->
+
+<!-- área onde são listados os campos que serão inseridos no cadastro através da função input, aqui são
+usados os nomes das APIs-->
+<lightning-input-field field-name="Name"> </lightning-input-field>
+<lightning-input-field field-name="Valor_da_Oportunidade__c"> </lightning-input-field>
+<lightning-input-field field-name="CloseDate"> </lightning-input-field>
+<lightning-input-field field-name="StageName"> </lightning-input-field>
+
+<!--Botão que insere as informações preenchidas nos campos-->
+<lightning-button class="slds-m-top_small"  type="submit" label="Inserir"></lightning-button>
+
+</lightning-record-edit-form>
+</div>
+</div>
+</lightning-card>
+
+</template>
+
